@@ -1,5 +1,5 @@
 /* Gestion des cookies (tarteaucitron.js) et Google Analytics */
-const GA_ID = 'G-XXXXXXXXXX'; // remplacez par votre identifiant de mesure Google Analytics 4
+const GA_ID = 'G-2FR1WCRT6G'; // remplacez par votre identifiant de mesure Google Analytics 4
 
 tarteaucitron.init({
   "privacyUrl": "mentions-legales.html",
