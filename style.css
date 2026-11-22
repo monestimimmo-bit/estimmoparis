@@ -45,7 +45,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 700; line-height: 1.02; c
 h1 { font-size: clamp(2.7rem, 6.6vw, 5.8rem); font-weight: 800; letter-spacing: -.055em; line-height: .96; }
 h2 { font-size: clamp(2rem, 4.4vw, 3.5rem); }
 h3 { font-size: 1.4rem; letter-spacing: -.03em; line-height: 1.12; }
-p { margin: 0 0 1em; text-wrap: pretty; }
+p { margin: 0 0 1em; text-wrap: pretty; text-align: justify; text-align-last: left; text-justify: inter-word; hyphens: none; -webkit-hyphens: none; overflow-wrap: normal; word-break: normal; }
+.crumbs, .meta, .req-note, .msg { text-align: left; }
 a { color: var(--ink); text-decoration-color: rgba(229, 64, 31, .55); text-decoration-thickness: 2px; text-underline-offset: 4px; transition: color .25s, text-decoration-color .25s; }
 a:hover { color: var(--accent); text-decoration-color: var(--accent); }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
@@ -261,6 +262,9 @@ footer .wrap { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: spa
   .hero-in::after { min-height: 400px; box-shadow: 10px 10px 0 -2px var(--sky); }
   .hero-in::before { left: auto; right: .8rem; bottom: 1.4rem; width: 6.2rem; height: 6.2rem; font-size: .9rem; }
   form { padding: 1.6rem; border-radius: 28px; }
+}
+@media (max-width: 480px) {
+  p { text-align: left; } /* sur très petit écran, la justification crée de gros trous entre les mots */
 }
 @media (max-width: 600px) {
   header .wrap { flex-wrap: nowrap; }
